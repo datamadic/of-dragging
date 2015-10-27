@@ -1,0 +1,1 @@
+https://dl.openfin.co/services/download?fileName=of-dragging&config=http://datamadic.github.io/of-dragging/app.json
