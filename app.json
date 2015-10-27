@@ -1,0 +1,21 @@
+{
+    "devtools_port": 9090,
+    "startup_app": {
+        "name": "of-dragging",
+        "description": "OpenFin POC",
+        "url": "http://datamadic.github.io/of-dragging/",
+        "__url": "http://local:5000/",
+        "uuid": "of-dragging",
+        "autoShow": true
+    },
+    "runtime": {
+        "arguments": "",
+        "version": "stable"
+    },
+    "shortcut": {
+        "company": "OpenFin",
+        "description": "Openfin POC",
+        "name": "of-dragging",
+        "icon": "http://datamadic.github.io/of-demo-seed/cdn/openfin.ico"
+    }
+}

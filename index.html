@@ -1,0 +1,41 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>of-dragging</title>
+</head>
+<body>
+	<div id="drg"  draggable="true" style="width:100px;height:100px;background-color:steelblue;position:absolute"></div>
+
+	<script>
+		var drg = document.getElementById('drg');
+
+		drg.addEventListener('dragstart', function(e){
+			e.dataTransfer.setData("text/plain", JSON.stringify({
+				offsetX : e.offsetX,
+				offsetY: e.offsetY,
+				id: e.target.id
+			}));
+		});
+
+		document.body.addEventListener('dragover', function(e){
+			e.preventDefault();
+		});
+
+		document.body.addEventListener('drop', function(e){
+			var dragData, grgEle;
+			
+			e.preventDefault();
+
+			dragData = JSON.parse(e.dataTransfer.getData('Text'));
+			grgEle = document.getElementById(dragData.id);
+		
+			grgEle.style.left = e.x  - dragData.offsetX;
+			grgEle.style.top = e.y  - dragData.offsetY;
+		});
+		
+		fin.desktop.main(function(){
+			fin.desktop.System.showDeveloperTools('of-dragging', 'of-dragging');
+		});
+	</script>
+</body>
+</html>
